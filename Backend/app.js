@@ -18,6 +18,17 @@ app.get("/",(req,res)=>{
         res.send("Working Properlyyyy : ");
 })
 
+app.get("/GetAllStudent",(req,res)=>{
+
+    const AllStudent=[{name:"mohit",age:21},{name:"keval",age:22},{name:"rahul",age:34}];
+
+    res.status(200).json({
+        Success:true,
+        Message:"Get All Static Student : ",
+        Data:AllStudent
+    })
+})
+
 app.get("/AllStudent",async(req,res)=>{
    
       const AllStudent=await Student.find();
