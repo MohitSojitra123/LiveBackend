@@ -3,11 +3,12 @@ const mongoose=require("mongoose");
 require("dotenv").config();
 const Student=require("../Backend/Model/student.model.js");
 const connectDB=require("../Backend/config/db.js") 
-
+const cors=require("cors")
 
 const app=express();
 
 app.use(express.json());
+app.use(cors());
 
 
 connectDB();
