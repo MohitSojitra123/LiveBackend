@@ -43,7 +43,7 @@ app.get("/AllStudent",async(req,res)=>{
         Data:AllStudent
       })
 
-})
+})  
 
 
 app.post("/AddStudent",async(req,res)=>{
